@@ -75,6 +75,16 @@
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+    const dataInstances = data.reduce((accumulator, datum) => {
+      if (accumulator[datum] === undefined) {
+        accumulator[datum] = 1;
+      } else {
+        accumulator[datum] = accumulator[datum] + 1;
+      }
+      return accumulator;
+    }, Object());
+    console.log(dataInstances);
+
 
   </script>
 </body>
